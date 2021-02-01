@@ -1,0 +1,365 @@
+{
+	"info": {
+		"_postman_id": "689a8cc1-c816-4068-abee-77066a16045c",
+		"name": "JBPM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "VRAService",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "content",
+						"type": "text",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"appId\":\"12345\",\n\t\"provider\":\"vra\",\n\t\"size\":\"small\",\n\t\"userName\":\"small\",\n\t\"region\":\"us-east-1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.0.39:8081/vra-service/api/vm",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"39"
+					],
+					"port": "8081",
+					"path": [
+						"vra-service",
+						"api",
+						"vm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TriggerCreateVMWorkflow",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "content",
+						"type": "text",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"appId\":\"12345\",\n\t\"provider\":\"vra\",\n\t\"size\":\"small\",\n\t\"userName\":\"small\",\n\t\"region\":\"us-east-1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.0.39:8090/vm-service/createVM/",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"39"
+					],
+					"port": "8090",
+					"path": [
+						"vm-service",
+						"createVM",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PolicyCheckService",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "content",
+						"type": "text",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"appId\":\"12345\",\n\t\"provider\":\"vra\",\n\t\"size\":\"small\",\n\t\"userName\":\"small\",\n\t\"region\":\"us-east-1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.0.39:8081/policy-service/api/policy",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"39"
+					],
+					"port": "8081",
+					"path": [
+						"policy-service",
+						"api",
+						"policy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BluePrintService",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "content",
+						"type": "text",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.0.39:8081/blueprint-service/api/blueprint",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"39"
+					],
+					"port": "8081",
+					"path": [
+						"blueprint-service",
+						"api",
+						"blueprint"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IamService",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "content",
+						"type": "text",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"appId\":\"12345\",\n\t\"provider\":\"vra\",\n\t\"size\":\"small\",\n\t\"userName\":\"small\",\n\t\"region\":\"us-east-1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.0.39:8081/iam-service/api/role/rishi",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"39"
+					],
+					"port": "8081",
+					"path": [
+						"iam-service",
+						"api",
+						"role",
+						"rishi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EmailService",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"emailMessage\":\"Email is sending\"\n\t\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.0.39:8081/email-service/api/sendemail",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"39"
+					],
+					"port": "8081",
+					"path": [
+						"email-service",
+						"api",
+						"sendemail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PublishKafka",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"instanceId\":\"i-1234567890abcdef0\",\n\t\"imageId\":\"ami-bff32ccc\",\n\t\"instanceType\":\"small\",\n\t\"instanceState\":\"running\",\n\t\"availabilityZone\":\"us-east-1a\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9092/kafka/publish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"kafka",
+						"publish"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

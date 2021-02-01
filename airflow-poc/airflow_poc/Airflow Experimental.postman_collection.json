@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "a80ba373-6d79-405d-aae8-012ec40bbe8e",
+		"name": "Airflow Experimental",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ListDagRuns_airflowpoc1",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/experimental/dags/airflow_poc_1/dag_runs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"experimental",
+						"dags",
+						"airflow_poc_1",
+						"dag_runs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListDagRuns_airflowpoc2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/experimental/dags/airflow_poc_2/dag_runs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"experimental",
+						"dags",
+						"airflow_poc_2",
+						"dag_runs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TriggerDag_airflowpoc1",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"replace_microseconds\":\"false\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/experimental/dags/airflow_poc_1/dag_runs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"experimental",
+						"dags",
+						"airflow_poc_1",
+						"dag_runs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TriggerDag_airflowpoc2",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Cache-Control",
+						"type": "text",
+						"value": "no-cache"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"conf\": {\n        \"employees\": {\n            \"employee\": [\n                {\n                    \"id\": \"1\",\n                    \"firstName\": \"Tom\",\n                    \"lastName\": \"Cruise\"\n                },\n                {\n                    \"id\": \"2\",\n                    \"firstName\": \"Maria\",\n                    \"lastName\": \"Sharapova\"\n                },\n                {\n                    \"id\": \"3\",\n                    \"firstName\": \"James\",\n                    \"lastName\": \"Bond\"\n                }\n            ]\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/experimental/dags/airflow_poc_2/dag_runs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"experimental",
+						"dags",
+						"airflow_poc_2",
+						"dag_runs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

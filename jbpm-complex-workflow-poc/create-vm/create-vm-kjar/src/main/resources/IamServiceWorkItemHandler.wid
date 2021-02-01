@@ -1,0 +1,13 @@
+[
+  [
+    "name" : "IamServiceWorkItemHandler", 
+    "parameters" : [
+        "output" : new ObjectDataType()
+    ],
+    "results" : [
+        "iamServiceResponse" : new ObjectDataType()
+    ],
+    "displayName" : "IamServiceWorkItemHandler",
+    "icon" : "defaultservicenodeicon.png"
+  ]
+]

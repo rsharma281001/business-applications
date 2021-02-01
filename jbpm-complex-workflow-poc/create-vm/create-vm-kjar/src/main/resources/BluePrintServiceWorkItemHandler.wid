@@ -1,0 +1,13 @@
+[
+  [
+    "name" : "BluePrintServiceWorkItemHandler", 
+    "parameters" : [
+        "output" : new ObjectDataType()
+    ],
+    "results" : [
+        "bluePrintServiceResponse" : new ObjectDataType()
+    ],
+    "displayName" : "BluePrintServiceWorkItemHandler",
+    "icon" : "defaultservicenodeicon.png"
+  ]
+]

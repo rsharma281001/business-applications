@@ -1,0 +1,13 @@
+[
+  [
+    "name" : "PolicyServiceWorkItemHandler", 
+    "parameters" : [
+        "output" : new ObjectDataType()
+    ],
+    "results" : [
+        "policyServiceResponse" : new ObjectDataType()
+    ],
+    "displayName" : "PolicyServiceWorkItemHandler",
+    "icon" : "defaultservicenodeicon.png"
+  ]
+]
